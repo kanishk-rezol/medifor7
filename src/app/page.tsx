@@ -1,8 +1,8 @@
+"use client";
 import Head from 'next/head'
 import Navbar from '@/components/pages/Navbar'
 import HomeSection from '@/components/pages/Home'
-import AboutSection from '@/components/pages/About'
-
+import dynamic from 'next/dynamic'
 export default function HomePage() {
   return (
     <>
@@ -13,7 +13,6 @@ export default function HomePage() {
       <main>
         <Navbar />
         <HomeSection />
-        <AboutSection/>
       </main>
     </>
   )

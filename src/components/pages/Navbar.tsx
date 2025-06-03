@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { SmoothCursor} from "@/components/ui/smooth-cursor"
 import {
   Popover,
   PopoverContent,
@@ -13,15 +14,16 @@ import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-b
 export default function Navbar() {
   return (
     <nav className="relative top-0 w-full z-50">
+      <SmoothCursor/>
       <ul className="hidden sm:flex items-center justify-between px-6 py-4">
         <div className="flex gap-8 ml-7 text-[18px]">
-          <Image src="/photos/logo.png" alt="Logo" width={46} height={46} />
+          {/* <Image src="/photos/logo.png" alt="Logo" width={46} height={46} /> */}
           <li>
             <a href="#home" className="hover:underline">
-              Home
+              
             </a>
           </li>
-          <li>
+          {/* <li>
             <a href="#about" className="hover:underline">
               About
             </a>
@@ -35,12 +37,12 @@ export default function Navbar() {
             <a href="#contact" className="hover:underline">
               Achievements
             </a>
-          </li>
+          </li> */}
         </div>
         <div>
       <Popover>
       <PopoverTrigger asChild>
-        <InteractiveHoverButton>Free Trial</InteractiveHoverButton>
+        <InteractiveHoverButton>Send msg</InteractiveHoverButton>
       </PopoverTrigger>
       <PopoverContent className="w-80 h-96 mr-8">
         <div className="grid gap-9">
@@ -145,22 +147,22 @@ export default function Navbar() {
                 className="col-span-2 h-8"
               />
             </div>
-            <div className="grid grid-cols-3 items-center gap-4">
+            {/* <div className="grid grid-cols-3 items-center gap-4">
               <Label htmlFor="Phone no">Phone no</Label>
               <Input
                 id="Phone no"
                 defaultValue="1234567890"
                 className="col-span-2 h-8"
               />
-            </div>
-            <div className="grid grid-cols-3 items-center gap-4">
+            </div> */}
+            {/* <div className="grid grid-cols-3 items-center gap-4">
               <Label htmlFor="Age">Age </Label>
               <Input
                 id="Age"
                 defaultValue="99"
                 className="col-span-2 h-8"
               />
-            </div>
+            </div> */}
             <div className="grid grid-cols-3 items-center gap-4">
               <Label htmlFor="Message">Message </Label>
               <Input
@@ -181,7 +183,7 @@ export default function Navbar() {
               Home
             </a>
           </li>
-          <li>
+          {/* <li>
             <a href="#about" className="hover:underline block">
               About
             </a>
@@ -195,7 +197,7 @@ export default function Navbar() {
             <a href="#contact" className="hover:underline block">
               Achievements
             </a>
-          </li>
+          </li> */}
         </ul>
       </div>
     </nav>
